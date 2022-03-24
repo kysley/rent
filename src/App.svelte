@@ -7,13 +7,14 @@
   let costOfGas = 0;
   let costOfHydro = 0;
 
-  $: utilityCosts = costOfGas + costOfInternet + costOfHydro + 5;
+  $: utilityCosts = costOfGas + costOfInternet + costOfHydro;
 
   function calculateRent(costs: number) {
+    const costsWithBankFees = costs + 5;
     return {
-      lake: (967 + costs / 3).toFixed(2),
-      nick: (892 + costs / 3).toFixed(2),
-      evan: (1042 + costs / 3).toFixed(2),
+      lake: (967 + costsWithBankFees / 3).toFixed(2),
+      nick: (892 + costsWithBankFees / 3).toFixed(2),
+      evan: (1042 + costsWithBankFees / 3).toFixed(2),
     };
   }
 
@@ -42,7 +43,7 @@
     <span>Nick: {rents.nick}</span>
   </div>
   <p style="font-style: italic;">
-    utilites were {utilityCosts} this month with $5 in bank fees
+    utilites were {utilityCosts} this month. plus an extra $5 in bank fees
   </p>
 </main>
 
