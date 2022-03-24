@@ -7,7 +7,7 @@
   let costOfGas = 0;
   let costOfHydro = 0;
 
-  $: utilityCosts = costOfGas + costOfInternet + costOfHydro;
+  $: utilityCosts = costOfGas + costOfInternet + costOfHydro + 5;
 
   function calculateRent(costs: number) {
     return {
@@ -42,7 +42,7 @@
     <span>Nick: {rents.nick}</span>
   </div>
   <p style="font-style: italic;">
-    utilites were {utilityCosts} this month
+    utilites were {utilityCosts} this month with $5 in bank fees
   </p>
 </main>
 
