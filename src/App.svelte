@@ -3,7 +3,7 @@
   const today = date.getDate();
   const daysTillRent = 25 - today;
 
-  let costOfInternet = 83.06;
+  let costOfInternet = 89.84;
   let costOfGas = 0;
   let costOfHydro = 0;
 
